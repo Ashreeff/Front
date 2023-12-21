@@ -37,17 +37,19 @@ export class IndexComponent implements OnInit {
 
   
 
-  deleteProduct(_id:object){
- 
-    this.productsService.delete(_id).subscribe(res => {
-
-         this.products = this.products.filter((item: { _id: object; }) => item._id !== _id);
-
-         console.log('Post deleted successfully!');
-
-    })
-
+  deleteProduct(_id: object) {
+    this.productsService.delete(_id).subscribe(() => {
+      this.refreshData();
+      console.log('Post deleted successfully!');
+    });
   }
+  
+  private refreshData() {
+    this.productsService.getAll().subscribe((data: Products[]) => {
+      this.products.data = data; // Update the data property of MatTableDataSource
+    });
+  }
+  
 
  
   filter(event: Event) {

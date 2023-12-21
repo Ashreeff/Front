@@ -1,0 +1,71 @@
+/* Add this to your component's CSS file or the global styles file */
+
+.container {
+    margin: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border: 1px solid #bd2130;
+  }
+/* Style pour le conteneur de recherche */
+.custom-search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style pour le champ de recherche */
+  .custom-search-field {
+    flex: 1;
+  }
+  
+  /* Style pour le bouton avec icône */
+  .custom-icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px; /* Ajustez la valeur selon vos besoins */
+  }
+  
+  /* Style pour l'icône à l'intérieur du bouton */
+  .custom-icon-button i {
+    /* Ajoutez des styles supplémentaires selon vos besoins */
+  }
+  
+  

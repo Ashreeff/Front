@@ -6,6 +6,8 @@ import { CardsComponent } from './cards/cards.component';
 import { PanierComponent } from './panier/panier.component';
 import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShoppingCartRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatPaginatorModule,
     HttpClientModule
+ 
 
   ]
 })

@@ -33,7 +33,7 @@ export class AuthService {
             alert("Error !")
           },
           complete: () => {
-            this.router.navigate(['products']);
+            this.router.navigate(['admin']);
            }
       });
   }

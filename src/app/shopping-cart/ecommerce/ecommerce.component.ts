@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { CardsComponent } from '../cards/cards.component';
 import { PanierComponent } from '../panier/panier.component';
 
+
 @Component({
   selector: 'app-ecommerce',
   templateUrl: './ecommerce.component.html',

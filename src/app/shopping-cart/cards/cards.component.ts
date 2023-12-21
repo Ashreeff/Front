@@ -22,6 +22,7 @@ export class CardsComponent implements OnInit {
 
   ngOnInit() {
         this.loadProducts();
+        
     }
 
   loadProducts() {

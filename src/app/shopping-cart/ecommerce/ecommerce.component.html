@@ -1,26 +1,58 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+        <h1 class="display-4 fw-bolder">Shop with Korsia</h1>
+        <p class="lead fw-normal text-white-50 mb-0">Home/Shop</p>
+      </div>
+    </div>
+  </header>
+  
+  <section class="py-5 col-lg-12">
     <div class="container">
-        <a class="navbar-brand" href="#" routerLink="/ecommerce" >Ecommerce Space</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" 
-          data-target="#navbarResponsive" aria-controls="navbarResponsive" 
-          aria-expanded="false" aria-label="Toggle navigation" 
-          (click)="toggleCollapsed()">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" (click)="reset()">Home</a>
-                </li>
-            </ul>
+      <div class="row">
+        <!-- Filter Sidebar (Move to the left) -->
+        <div class="col-lg-2">
+          <div class="card">
+            <div class="card-header text-white" style="background-color: #3b5d50;">
+              <h5 class="mb-0">Filters</h5>
+            </div>
+            <div class="card-body">
+              <!-- Category Filter -->
+              <div class="mb-3">
+                <label for="categoryFilter" class="form-label text-dark">Category:</label>
+                <select class="form-select" id="categoryFilter">
+                  <option value="all">All Categories</option>
+                  <!-- Add your category options here -->
+                </select>
+              </div>
+  
+              <!-- Price Filter -->
+              <div>
+                <label for="priceFilter" class="form-label text-dark">Price Range:</label>
+                <input type="range" class="form-range" id="priceFilter">
+              </div>
+            </div>
+          </div>
         </div>
+  
+        <!-- Products (Move to the middle) -->
+        <div class="col-lg-7">
+          <app-cards #productsC [hidden]="orderFinished" (productAdded)="addProductToCart($event)"></app-cards>
+        </div>
+  
+        <!-- Shopping Cart (Move to the right) -->
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-header text-white" style="background-color: #3b5d50;">
+              <h5 class="mb-0">Shopping Cart</h5>
+            </div>
+            <div class="card-body">
+              <app-panier [productAdded]="productAdded" (onOrderFinished)=finishOrder($event) #shoppingCartC [hidden]="orderFinished"></app-panier>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</nav>
-<div class="row">
-    <div class="col-md-9">
-        <app-cards #productsC [hidden]="orderFinished" (productAdded)="addProductToCart($event)"></app-cards>
-    </div>
-    <div class="col-md-3">
-        <app-panier         [productAdded]="productAdded" (onOrderFinished)=finishOrder($event) #shoppingCartC [hidden]="orderFinished"></app-panier>
-    </div>
-</div>
+  </section>
+  
+  

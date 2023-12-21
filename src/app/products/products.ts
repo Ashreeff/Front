@@ -7,5 +7,6 @@ export class Products {
         prix:number
         qtestock:number
         scategorieID:Object
+        
 
 }

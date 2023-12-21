@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ProductsModule } from './products/products.module';
 import { AuthentificationModule } from './authentification/authentification.module'; 
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
@@ -18,6 +19,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { AdminComponent } from './admin/admin.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { MatButtonModule } from '@angular/material/button';
     FooterComponent,
     ContactComponent,
     AboutComponent,
-    HomeComponent, 
+    HomeComponent,
+    AdminComponent,
+   
+   
+    
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    RouterModule
+    MatToolbarModule,
+    RouterModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

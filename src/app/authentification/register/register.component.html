@@ -1,25 +1,29 @@
-<form (ngSubmit)="Ajoutuser()" >
-    <div class="mb-3">
-        
-        <input type="text" class="form-control" id="email"  name = "email" placeholder="email" [(ngModel)]="user.email" >
-      </div>
-      <div class="mb-3">
-        
-        <input type="text" class="form-control" id="password"  name = "password" placeholder="password" [(ngModel)]="user.password" >
-      </div>
-      <div class="mb-3">
-        
-        <input type="text" class="form-control" id="firstname"  name = "firstname" placeholder="firstname" [(ngModel)]="user.firstname" >
-      </div>
-      <div class="mb-3">
-        
-        <input type="text" class="form-control" id="lastname"  name = "lastname" placeholder="lastname" [(ngModel)]="user.lastname" >
-      </div>
-     
+<!-- register.component.html -->
+
+<div fxLayoutAlign="center center" fxFlexFill>
+  <mat-card fxFlex="25">
+    <mat-toolbar style="background-color:#3b5d50;color:white;">Register</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="Ajoutuser()">
+      <mat-form-field>
+        <input matInput type="text" id="email" name="email" placeholder="Email" [(ngModel)]="user.email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" id="password" name="password" placeholder="Password" [(ngModel)]="user.password" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="firstname" name="firstname" placeholder="Firstname" [(ngModel)]="user.firstname" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" id="lastname" name="lastname" placeholder="Lastname" [(ngModel)]="user.lastname" required>
+      </mat-form-field>
       
-    
-    <div>
-      <button type="submit" class="btn btn-success">Enregistrer</button>
-    </div>
+      <div style="text-align: center;">
+        <button mat-raised-button type="submit">Register</button>
+      </div>
    
     </form>
+    <div style="text-align: center; margin-top: 10px;">
+      <p>Already have an account? <a mat-button color="primary" routerLink="/login" style="text-decoration: none;color: #3b5d50;font-weight: bold;">Login&nbsp;&rarr;</a></p>
+    </div>
+  </mat-card>
+</div>

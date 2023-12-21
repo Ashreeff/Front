@@ -1,42 +1,44 @@
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+/* login.component.css */
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Cela assure que le contenu est centré verticalement sur toute la hauteur de la vue. */
+}
+
+.mat-card {
+  width: 300px; /* Ajustez la largeur de la carte selon vos besoins */
   
-  .form-signin {
-    width: 800px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-group {
-    position: relative;
-  }
-  
-  .input-group-addon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border: 1px solid #007bff;
-  }
-  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 40px; /* Espacement de 40px depuis le haut de la forme */
+}
+
+button {
+  margin-top: 16px; /* Espacement entre le bouton et les champs de formulaire */
+}
+.mat-mdc-card {
+width: 500px;}
+mat-form-field {
+  width: 80%; /* Les champs d'entrée occupent toute la largeur du formulaire */
+  margin: 0 auto;
+}
+
+input {
+  width: 80%; /* Les champs d'entrée occupent toute la largeur du formulaire */
+  margin: 0 auto;
+}
+
+button {
+  width: 80%; /* Le bouton prend la largeur nécessaire par défaut */
+  margin: 0 auto;
+  margin-bottom:10px;
+}
+.mat-form-field.mat-password-form-field ::ng-deep .mat-password-visibility {
+  right: 0; /* Déplace l'œil de masquage/démasquage vers la droite */
+}

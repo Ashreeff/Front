@@ -12,11 +12,15 @@ import { MatSortModule } from  '@angular/material/sort';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {CloudinaryModule} from '@cloudinary/ng';
 import { FilePondModule, registerPlugin } from 'ngx-filepond';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 // import and register filepond file type validation plugin
 import  * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import  * as FilepondPluginImageEdit from 'filepond-plugin-image-edit';
 import  * as FilepondPluginImagePreview from 'filepond-plugin-image-preview';
+
 registerPlugin(FilePondPluginFileValidateType,FilepondPluginImageEdit,FilepondPluginImagePreview);
 
 
@@ -26,7 +30,8 @@ registerPlugin(FilePondPluginFileValidateType,FilepondPluginImageEdit,FilepondPl
     IndexComponent,
     ViewComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+
   ],
   imports: [
     CommonModule,
@@ -38,8 +43,10 @@ registerPlugin(FilePondPluginFileValidateType,FilepondPluginImageEdit,FilepondPl
     FormsModule,
     ReactiveFormsModule,
     CloudinaryModule,
-    FilePondModule
-
+    FilePondModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule
 
   ]
 })

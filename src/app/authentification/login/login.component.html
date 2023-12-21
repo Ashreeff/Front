@@ -1,22 +1,18 @@
-<!-- login.component.html -->
-<form class="form-signin w-50 m-auto" (ngSubmit)="loginUser()">
-  <mat-card class="login-card">
-    <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
-    </mat-card-header>
-
-    <mat-card-content>
-      <mat-form-field class="full-width">
+<div fxLayoutAlign="center center" fxFlexFill>
+  <mat-card fxFlex="25">
+    <mat-toolbar style="background-color:#3b5d50;color:white;">Login</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="loginUser()">
+      <mat-form-field>
         <input matInput type="text" id="email" name="email" placeholder="Email" [(ngModel)]="email" required>
       </mat-form-field>
-
-      <mat-form-field class="full-width">
-        <input matInput type="password" id="password" name="password" placeholder="Password" [(ngModel)]="password" required>
+      <mat-form-field>
+        <input matInput  type="password" id="password" name="password" placeholder="Password" [(ngModel)]="password" required>
       </mat-form-field>
-    </mat-card-content>
-
-    <mat-card-actions class="d-grid">
-      <button mat-raised-button type="submit" color="primary">Sign in</button>
-    </mat-card-actions>
+<button mat-raised-button type="submit">login</button>
+<div style="text-align: center; margin-top: 16px;">
+  <p>Don't have an account? <a routerLink="/register" style="text-decoration: none; color: #3b5d50;font-weight: bold;">Register now!</a></p>
+</div>
+    </form>
   </mat-card>
-</form>
+
+</div>

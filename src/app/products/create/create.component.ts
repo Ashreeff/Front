@@ -4,6 +4,7 @@ import { Products } from '../products';
 import { ScategoriesService } from '../../scategories/scategories.service'
 import { Scategories } from '../../scategories/scategories'
 import { FilePondComponent } from 'ngx-filepond';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-create',
@@ -20,7 +21,12 @@ export class CreateComponent implements OnInit {
   products:Products=new Products()
   scategories!:Scategories[] ;
 
-  constructor(private prodserv:ProductsService,private scatserv:ScategoriesService){}
+  constructor(
+    private prodserv: ProductsService,
+    private scatserv: ScategoriesService,
+    private toastr: ToastrService  // Add this line
+  ) {}
+  
   ngOnInit(){
    this.loadscategorie()
   }
@@ -36,6 +42,7 @@ export class CreateComponent implements OnInit {
       console.log(data)
       this.closeModal() 
       window.location.reload();
+      this.toastr.success('Article added successfully!', 'Success');
   }))
     
   }

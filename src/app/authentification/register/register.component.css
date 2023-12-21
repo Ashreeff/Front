@@ -1,0 +1,43 @@
+/* login.component.css */
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Cela assure que le contenu est centré verticalement sur toute la hauteur de la vue. */
+  }
+  
+
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 0px; /* Espacement de 40px depuis le haut de la forme */
+  }
+  
+  button {
+    margin-top: 16px; /* Espacement entre le bouton et les champs de formulaire */
+  }
+  .mat-mdc-card {
+  width: 500px;}
+  mat-form-field {
+    width: 80%; /* Les champs d'entrée occupent toute la largeur du formulaire */
+    margin: 0 auto;
+  }
+  
+  input {
+    width: 80%; /* Les champs d'entrée occupent toute la largeur du formulaire */
+    margin: 0 auto;
+  }
+  
+  button {
+    width: 80%; /* Le bouton prend la largeur nécessaire par défaut */
+    margin: 0 auto;
+    margin-bottom:10px;
+    text-align: center;
+  }
+  .mat-form-field.mat-password-form-field ::ng-deep .mat-password-visibility {
+    right: 0; /* Déplace l'œil de masquage/démasquage vers la droite */
+  }
+ 

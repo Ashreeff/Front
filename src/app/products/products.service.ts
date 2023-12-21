@@ -180,11 +180,7 @@ export class ProductsService {
   delete(_id:object){
 
     return this.httpClient.delete(this.apiURL + '/articles/' + _id, this.httpOptions)
-
-  
-
     .pipe(
-
       catchError(this.errorHandler)
 
     )

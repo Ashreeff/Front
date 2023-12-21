@@ -5,7 +5,9 @@ import { EcommerceComponent } from './shopping-cart/ecommerce/ecommerce.componen
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { CreateComponent } from './products/create/create.component';
+import { IndexComponent } from './products/index/index.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,9 @@ const routes: Routes = [
   { path: 'shopping-cart/ecommerce', component: EcommerceComponent },
   { path: 'components/contact', component: ContactComponent },
   { path: 'components/about', component: AboutComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'products/create', component: CreateComponent },
+  { path: 'products/index', component: IndexComponent },
  
 ];
 
